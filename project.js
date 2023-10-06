@@ -73,7 +73,7 @@ const spin = () => {
 
   const reels = [];
   for (let i = 0; i < COLS; i++) {
-    reels.push([]);
+    reels.push([]); // adds new col to reels array each time
     const reelSymbols = [...symbols];
     for (let j = 0; j < ROWS; j++) {
       const randomIndex = Math.floor(Math.random() * reelSymbols.length);
@@ -86,9 +86,9 @@ const spin = () => {
   return reels;
 };
 //const depositAmount = deposit();
-spin();
 
 let balance = deposit();
 const numberOfLines = getNumberOfLines();
 const bet = getBet(balance, numberOfLines);
 //console.log(depositAmount);
+const reels = spin();
