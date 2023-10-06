@@ -142,3 +142,5 @@ const rows = transpose(reels);
 // console.log(rows);
 
 printRows(rows);
+const winnings = getWinnings(rows, bet, numberOfLines);
+print("You won, $" + winnings.toString());
